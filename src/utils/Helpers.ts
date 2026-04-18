@@ -1,5 +1,5 @@
-import { Env } from '@/libs/Env';
-import { routing } from '@/libs/I18nRouting';
+import { Env } from '@/libs/env';
+import { routing } from '@/libs/i18n-routing';
 
 /**
  * Resolves the public base URL of the application.
@@ -26,3 +26,15 @@ export const getI18nPath = (url: string, locale: string) => {
 
   return `/${locale}${url}`;
 };
+
+export function getRandomItem<T>(items: T[]): T {
+  const index = Math.floor(Math.random() * items.length);
+  // oxlint-disable-next-line typescript/no-non-null-assertion
+  return items[index]!;
+}
+
+// oxlint-disable-next-line typescript/promise-function-async
+export function delay(second: number) {
+  // oxlint-disable-next-line promise/avoid-new no-promise-executor-return
+  return new Promise((resolve) => setTimeout(resolve, second * 1000));
+}

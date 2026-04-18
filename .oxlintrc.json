@@ -8,6 +8,7 @@
   "rules": {
     "no-warning-comments": "off", // Allow TODO and FIXME comments
     "no-inline-comments": "off",
+    "no-void": ["error", { "allowAsStatement": true }],
 
     "sort-keys": "off",
     "func-style": "off",

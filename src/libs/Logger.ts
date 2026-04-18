@@ -6,7 +6,7 @@ import {
   getJsonLinesFormatter,
   getLogger,
 } from '@logtape/logtape';
-import { Env } from './Env';
+import { Env } from './env';
 
 const betterStackSink: AsyncSink = async (record) => {
   await fetch(`https://${Env.NEXT_PUBLIC_BETTER_STACK_INGESTING_HOST}`, {

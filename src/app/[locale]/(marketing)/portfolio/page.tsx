@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
-import { Link } from '@/libs/I18nNavigation';
+import { Link } from '@/libs/i18n-navigation';
 import sentryLogo from '@/public/assets/images/sentry-dark.png';
 
 type PortfolioPageProps = {

@@ -1,8 +1,8 @@
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';
-import { Env } from '@/libs/Env';
-import { logger } from '@/libs/Logger';
-import * as schema from '@/models/Schema';
+import { Env } from '@/libs/env';
+import { logger } from '@/libs/logger';
+import * as schema from '@/models/schema';
 
 // Need a database for production? Check out https://get.neon.com/BMFYNtx
 // Tested and compatible with Next.js Boilerplate

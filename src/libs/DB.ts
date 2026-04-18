@@ -1,5 +1,5 @@
-import { createDbConnection } from '@/utils/DBConnection';
-import { Env } from './Env';
+import { createDbConnection } from '@/utils/db-connection';
+import { Env } from './env';
 
 declare global {
   var cachedDrizzle: ReturnType<typeof createDbConnection> | undefined;
