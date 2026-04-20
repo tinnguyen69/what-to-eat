@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import MealSelection from '@/components/MealSelection';
+import MealRandom from '@/components/home/meal-random';
+import { lusitana } from '@/ui/font';
 
 type IndexPageProps = {
   params: Promise<{ locale: string }>;
@@ -30,19 +31,13 @@ export default async function Index(props: IndexPageProps) {
   });
 
   return (
-    <main
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        background: '#f4f4f4',
-      }}
-    >
-      <h1 style={{ marginBottom: '20px' }}>{t('header')}</h1>
-
-      <MealSelection />
+    <main>
+      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+        {t('header')}
+      </h1>
+      <div className="flex flex-col items-center justify-center">
+        <MealRandom />
+      </div>
     </main>
   );
 }

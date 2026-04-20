@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import '@/styles/global.css';
+import '@/ui/global.css';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { DemoBadge } from '@/components/DemoBadge';
 import { routing } from '@/libs/i18n-routing';
+import { inter } from '@/ui/font';
 
 export const metadata: Metadata = {
   icons: [
@@ -54,12 +54,8 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={locale}>
-      <body>
-        <NextIntlClientProvider>
-          {props.children}
-
-          <DemoBadge />
-        </NextIntlClientProvider>
+      <body className={`${inter.className} antialiased`}>
+        <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
       </body>
     </html>
   );

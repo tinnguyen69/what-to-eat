@@ -1,4 +1,4 @@
-import { createDbConnection } from '@/utils/db-connection';
+import { createDbConnection } from '@/libs/utils/db-connection';
 import { Env } from './env';
 
 declare global {

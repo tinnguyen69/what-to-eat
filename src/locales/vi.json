@@ -12,12 +12,40 @@
     "footer_text": "© {year} {name}. Made with <author></author>.",
     "main_navigation_label": "Main navigation"
   },
+  "Common": {
+    "search": "Tìm kiếm"
+  },
   "Index": {
-    "meta_title": "Next.js Boilerplate Presentation",
-    "meta_description": "Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.",
+    "meta_title": "Hôm nay ăn gì?",
+    "meta_description": "Chọn lựa ngẫu nhiên một món thật ngon để nấu cho hôm nay.",
     "sponsors_title": "Sponsors",
     "zap_emoji_label": "Zap",
-    "header": "Hôm nay mình ăn 🍽️ gì hè?"
+    "header": "Hôm nay mình ăn 🍽️ gì hè?",
+    "button_random": "Chọn lại",
+    "label_thinking": "Đang si nghĩ..."
+  },
+  "Meal": {
+    "meta_title": "Thực đơn",
+    "meta_description": "Danh sách các món ăn để lựa chọn",
+    "search": "Tìm món...",
+    "button_add": "Thêm món",
+    "button_delete": "Xoá món",
+    "thead_name": "Tên món",
+    "thead_desc": "Mô tả",
+    "thead_edit": "Sửa"
+  },
+  "MealCreate": {
+    "meta_title": "Thêm món",
+    "meta_description": "Thêm một món ngon mới để nấu",
+    "breadcrumb_parent": "Thực đơn",
+    "header": "Thêm món",
+    "name_label": "Đặt tên món",
+    "name_placeholder": "Nhập tên món",
+    "desc_label": "Thêm mô tả",
+    "desc_placeholder": "Nhập mô tả món",
+    "button_cancel": "Hổng thêm nữa",
+    "button_submit": "Thêm",
+    "button_submitting": "Đang thêm nè..."
   },
   "Counter": {
     "meta_title": "Counter",

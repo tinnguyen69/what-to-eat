@@ -1,0 +1,50 @@
+/* Ensure Clerk is compatible with Tailwind CSS v4 */
+@layer theme, base, clerk, components, utilities;
+
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: var(--color-pink-500);
+  --color-primary-light: var(--color-pink-400);
+  --color-primary-blur: var(--color-pink-300);
+  --color-secondary: var(--color-gray-100);
+}
+
+@layer base {
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .app-input,
+  .app-textarea,
+  .app-select {
+    @apply block w-full rounded-md border border-gray-200 bg-white py-2 pl-10 text-sm placeholder:text-gray-500;
+  }
+
+  .app-button {
+    @apply rounded-md border border-gray-200 p-2 hover:bg-secondary;
+  }
+
+  .app-button-primary {
+    @apply flex items-center rounded-lg bg-primary-light px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-blur focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary active:bg-primary aria-disabled:cursor-not-allowed aria-disabled:opacity-50;
+  }
+
+  .app-button-primary-2 {
+    @apply flex items-center rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-light focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .app-button-secondary {
+    @apply flex items-center rounded-lg bg-secondary px-4 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200;
+  }
+}

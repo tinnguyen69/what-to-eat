@@ -1,10 +1,13 @@
 'use server';
 
+import { eq } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
+import { redirect } from 'next/navigation';
 import { z } from 'zod';
 import { mealSchema } from '@/models/schema';
 import type { Meal } from '@/types/meal';
 import { db } from './db';
+import { delay } from './utils/helpers';
 
 const MealFormSchema = z.object({
   id: z.string(),
@@ -25,6 +28,8 @@ export type State = {
 };
 
 export async function createMeal(_prevState: State, formData: FormData) {
+  await delay(3);
+
   // Validate form fields using Zod
   const validatedFields = CreateMeal.safeParse({
     name: formData.get('name'),
@@ -59,8 +64,13 @@ export async function createMeal(_prevState: State, formData: FormData) {
     console.error(error);
     return { message: 'Database Error: Failed to Create Meal.' };
   } finally {
-    // Revalidate the cache for the invoices page and redirect the user.
-    revalidatePath('/');
-    // redirect('/');
+    // Revalidate the cache for the meals page and redirect the user.
+    revalidatePath('/meals');
+    redirect('/meals');
   }
+}
+
+export async function deleteMeal(id: string) {
+  await db.delete(mealSchema).where(eq(mealSchema.id, id));
+  revalidatePath('/meal');
 }

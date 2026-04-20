@@ -1,7 +1,7 @@
 import { UserProfile } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getI18nPath } from '@/utils/helpers';
+import { getI18nPath } from '@/libs/utils/helpers';
 
 type UserProfilePageProps = {
   params: Promise<{ locale: string }>;
