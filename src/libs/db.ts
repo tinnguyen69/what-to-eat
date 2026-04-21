@@ -1,0 +1,16 @@
+import { createDbConnection } from '@/libs/utils/db-connection';
+import { Env } from './env';
+
+declare global {
+  var cachedDrizzle: ReturnType<typeof createDbConnection> | undefined;
+}
+
+// Stores the db connection in the global scope to prevent multiple instances due to hot reloading with Next.js
+const db = globalThis.cachedDrizzle ?? createDbConnection();
+
+// Only store in global during development to prevent hot reload issues
+if (Env.NODE_ENV !== 'production') {
+  globalThis.cachedDrizzle = db;
+}
+
+export { db };
