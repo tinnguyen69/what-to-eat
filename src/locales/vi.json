@@ -24,9 +24,14 @@
     "button_random": "Chọn lại",
     "label_thinking": "Đang si nghĩ..."
   },
+  "Sidenav": {
+    "home": "Quẹo lựa",
+    "meal": "Món ăn"
+  },
   "Meal": {
-    "meta_title": "Thực đơn",
+    "meta_title": "Món ăn",
     "meta_description": "Danh sách các món ăn để lựa chọn",
+    "header": "Món ăn",
     "search": "Tìm món...",
     "button_add": "Thêm món",
     "button_delete": "Xoá món",

@@ -24,9 +24,14 @@
     "button_random": "Pick Again",
     "label_thinking": "Thinking..."
   },
+  "Sidenav": {
+    "home": "Home",
+    "meal": "Meals"
+  },
   "Meal": {
-    "meta_title": "Meal",
+    "meta_title": "Meals",
     "meta_description": "List of meal that we can choose randomly",
+    "header": "Meals",
     "search": "Search...",
     "button_add": "Add Meal",
     "button_delete": "Delete Meal",

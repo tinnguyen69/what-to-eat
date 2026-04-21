@@ -8,6 +8,7 @@
   --color-primary-light: var(--color-pink-400);
   --color-primary-blur: var(--color-pink-300);
   --color-secondary: var(--color-gray-100);
+  --color-secondary-dark: var(--color-gray-200);
 }
 
 @layer base {
@@ -29,11 +30,11 @@
   .app-input,
   .app-textarea,
   .app-select {
-    @apply block w-full rounded-md border border-gray-200 bg-white py-2 pl-10 text-sm placeholder:text-gray-500;
+    @apply block w-full rounded-md border border-secondary-dark bg-white py-2 pl-10 text-sm placeholder:text-gray-500;
   }
 
   .app-button {
-    @apply rounded-md border border-gray-200 p-2 hover:bg-secondary;
+    @apply rounded-md border border-secondary-dark p-2 hover:bg-secondary;
   }
 
   .app-button-primary {
@@ -45,6 +46,6 @@
   }
 
   .app-button-secondary {
-    @apply flex items-center rounded-lg bg-secondary px-4 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200;
+    @apply flex items-center rounded-lg bg-secondary px-4 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:bg-secondary-dark;
   }
 }
